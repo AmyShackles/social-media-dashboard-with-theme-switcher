@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -15,17 +18,6 @@
     <title>
       Frontend Mentor | [Social Media Dashboard with Theme Switcher]
     </title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main class="main">
@@ -37,35 +29,58 @@
         <div class="theme-switch">
           <label for="theme-switcher">
             Dark Mode
-            <input id="themeSwitch" class="toggle" type="checkbox" />
           </label>
+          <input id="themeSwitch" class="toggle" type="checkbox" />
         </div>
       </div>
       <div class="accounts">
         <div class="account">
-          <p><img src="./images/icon-facebook.svg" />@nathanf</p>
+          <p>
+            <img src="./images/icon-facebook.svg" />
+            <span> @nathanf</span>
+          </p>
           <p class="follower-number">1987</p>
           <p>Followers</p>
-          <p class="green"><img src="./images/icon-up.svg" />12 Today</p>
+          <p class="green">
+            <img src="./images/icon-up.svg" />
+            <span> 12 Today</span>
+          </p>
         </div>
-
         <div class="account">
-          <p><img src="./images/icon-twitter.svg" />@nathanf</p>
+          <p>
+            <img src="./images/icon-twitter.svg" />
+            <span> @nathanf</span>
+          </p>
           <p class="follower-number">1044</p>
           <p>Followers</p>
-          <p class="green"><img src="./images/icon-up.svg" />99 Today</p>
+          <p class="green">
+            <img src="./images/icon-up.svg" />
+            <span> 99 Today</span>
+          </p>
         </div>
         <div class="account">
-          <p><img src="./images/icon-instagram.svg" />@realnathanf</p>
+          <p>
+            <img src="./images/icon-instagram.svg" />
+            <span> @realnathanf</span>
+          </p>
           <p class="follower-number">11k</p>
           <p>Followers</p>
-          <p class="green"><img src="./images/icon-up.svg" />1099 Today</p>
+          <p class="green">
+            <img src="./images/icon-up.svg" />
+            <span> 1099 Today</span>
+          </p>
         </div>
         <div class="account">
-          <p><img src="./images/icon-youtube.svg" />Nathan F.</p>
+          <p>
+            <img src="./images/icon-youtube.svg" />
+            <span> Nathan F.</span>
+          </p>
           <p class="follower-number">8239</p>
           <p>Subscribers</p>
-          <p class="green"><img src="./images/icon-up.svg" /> 144 Today</p>
+          <p class="red">
+            <img src="./images/icon-down.svg" />
+            <span> 144 Today</span>
+          </p>
         </div>
       </div>
 
@@ -76,37 +91,71 @@
       </div>
       <div class="overview">
         <div class="card">
-          Page Views 87 3%
+          <p>Page Views <img src="./images/icon-facebook.svg" /></p>
+          <p>
+            <span class="information">87</span>
+            <span class="green"><img src="./images/icon-up.svg" />3%</span>
+          </p>
         </div>
         <div class="card">
-          Likes 52 2%
+          <p>Likes <img src="./images/icon-facebook.svg" /></p>
+          <p>
+            <span class="information">52</span>
+            <span class="red"><img src="./images/icon-down.svg" /> 2%</span>
+          </p>
         </div>
         <div class="card">
-          Likes 5462 2257%
+          <p>Likes <img src="./images/icon-instagram.svg" /></p>
+          <p>
+            <span class="information">5462</span>
+            <span class="green"><img src="./images/icon-up.svg" /> 2257%</span>
+          </p>
         </div>
         <div class="card">
-          Profile Views 52k 1375%
+          <p>Profile Views <img src="./images/icon-instagram.svg" /></p>
+          <p>
+            <span class="information">52k</span>
+            <span class="green"><img src="./images/icon-up.svg" /> 1375%</span>
+          </p>
         </div>
         <div class="card">
-          Retweets 117 303%
+          <p>Retweets <img src="./images/icon-twitter.svg" /></p>
+          <p>
+            <span class="information">117</span>
+            <span class="green"> <img src="./images/icon-up.svg" />303%</span>
+          </p>
         </div>
         <div class="card">
-          Likes 507 553%
+          <p>Likes <img src="./images/icon-twitter.svg" /></p>
+          <p>
+            <span class="information">507</span>
+            <span class="green"><img src="./images/icon-up.svg" />553%</span>
+          </p>
         </div>
         <div class="card">
-          Likes 107 19%
+          <p>Likes <img src="./images/icon-youtube.svg" /></p>
+          <p>
+            <span class="information">107</span>
+            <span class="red"><img src="./images/icon-down.svg" /> 19%</span>
+          </p>
         </div>
         <div class="card">
-          Total Views 1407 12%
+          <p>Total Views<img src="./images/icon-youtube.svg" /></p>
+          <p>
+            <span class="information">1407</span>
+            <span class="red"><img src="./images/icon-down.svg" />12%</span>
+          </p>
         </div>
       </div>
     </main>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Amy Shackles</a>.
-    </div>
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor</a
+        >. Coded by <a href="https://amyshackles.com">Amy Shackles</a>.
+      </p>
+    </footer>
     <script>
       document
         .getElementById("themeSwitch")
