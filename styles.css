@@ -1,0 +1,298 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Theming */
+.onoffswitch {
+  --toggle-color-dark: linear-gradient(
+    to left,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+}
+html {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(195, 100%, 50%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+}
+body {
+  --toggle-color: linear-gradient(rgb(55, 143, 230), rgb(79, 222, 141));
+  --background-color: hsl(230, 17%, 14%);
+  --top-background-color: hsl(232, 19%, 15%);
+  --card-background: hsl(228, 28%, 20%);
+  --text-color: hsl(228, 34%, 66%);
+  --secondary-text-color: hsl(0, 0%, 100%);
+}
+body[data-theme="light"] {
+  --toggle-color: hsl(230, 22%, 74%);
+  --background-color: hsl(0, 0%, 100%);
+  --top-background-color: hsl(225, 100%, 98%);
+  --card-background: hsl(227, 47%, 96%);
+  --text-color: hsl(228, 12%, 44%);
+  --secondary-text-color: hsl(230, 17%, 14%);
+}
+
+/* Personal Styling */
+/* .header,
+.accounts,
+.overview {
+  display: flex;
+} */
+html,
+body {
+  height: 100%;
+}
+
+.toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 62px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color ease 0.3s;
+}
+
+.toggle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.toggle {
+  background: var(--toggle-color);
+}
+.toggle:checked {
+  background: var(--toggle-color);
+}
+
+.toggle:checked:before {
+  left: 32px;
+}
+main {
+  height: 100%;
+}
+label {
+  vertical-align: center;
+}
+.main {
+  display: grid;
+  grid-auto-rows: minmax(125px, auto);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 30px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--secondary-text-color);
+}
+.account,
+.card {
+  background-color: var(--card-background);
+}
+.green {
+  color: var(--lime-green);
+}
+@media screen and (min-width: 376px) {
+  .main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "accounts accounts accounts accounts"
+      "accounts accounts accounts accounts"
+      "subheading subheading subheading subheading"
+      "overview overview overview overview"
+      "overview overview overview overview";
+  }
+  .header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+  }
+  .theme-toggle {
+    width: 50%;
+  }
+
+  .accounts {
+    grid-area: accounts;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "account1 account2 account3 account4"
+      "account1 account2 account3 account4";
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+  }
+  .accounts div:nth-child(1) {
+    grid-area: account1;
+  }
+  .accounts div:nth-child(2) {
+    grid-area: account2;
+  }
+  .accounts div:nth-child(3) {
+    grid-area: account3;
+  }
+  .accounts div:nth-child(4) {
+    grid-area: account4;
+  }
+  .subheading {
+    grid-area: subheading;
+  }
+  .overview {
+    grid-area: overview;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "overview1 overview2 overview3 overview4"
+      "overview5 overview6 overview7 overview8";
+  }
+}

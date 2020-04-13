@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>
+      Frontend Mentor | [Social Media Dashboard with Theme Switcher]
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <div class="header">
+        <div class="title">
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <div class="theme-switch">
+          <label for="theme-switcher">
+            Dark Mode
+            <input id="themeSwitch" class="toggle" type="checkbox" />
+          </label>
+        </div>
+      </div>
+      <div class="accounts">
+        <div class="account">
+          <p><img src="./images/icon-facebook.svg" />@nathanf</p>
+          <p class="follower-number">1987</p>
+          <p>Followers</p>
+          <p class="green"><img src="./images/icon-up.svg" />12 Today</p>
+        </div>
+
+        <div class="account">
+          <p><img src="./images/icon-twitter.svg" />@nathanf</p>
+          <p class="follower-number">1044</p>
+          <p>Followers</p>
+          <p class="green"><img src="./images/icon-up.svg" />99 Today</p>
+        </div>
+        <div class="account">
+          <p><img src="./images/icon-instagram.svg" />@realnathanf</p>
+          <p class="follower-number">11k</p>
+          <p>Followers</p>
+          <p class="green"><img src="./images/icon-up.svg" />1099 Today</p>
+        </div>
+        <div class="account">
+          <p><img src="./images/icon-youtube.svg" />Nathan F.</p>
+          <p class="follower-number">8239</p>
+          <p>Subscribers</p>
+          <p class="green"><img src="./images/icon-up.svg" /> 144 Today</p>
+        </div>
+      </div>
+
+      <div class="subheading">
+        <h2>
+          Overview - Today
+        </h2>
+      </div>
+      <div class="overview">
+        <div class="card">
+          Page Views 87 3%
+        </div>
+        <div class="card">
+          Likes 52 2%
+        </div>
+        <div class="card">
+          Likes 5462 2257%
+        </div>
+        <div class="card">
+          Profile Views 52k 1375%
+        </div>
+        <div class="card">
+          Retweets 117 303%
+        </div>
+        <div class="card">
+          Likes 507 553%
+        </div>
+        <div class="card">
+          Likes 107 19%
+        </div>
+        <div class="card">
+          Total Views 1407 12%
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Amy Shackles</a>.
+    </div>
+    <script>
+      document
+        .getElementById("themeSwitch")
+        .addEventListener("change", function(event) {
+          event.target.checked
+            ? document.body.setAttribute("data-theme", "light")
+            : document.body.removeAttribute("data-theme");
+        });
+    </script>
+  </body>
+</html>
