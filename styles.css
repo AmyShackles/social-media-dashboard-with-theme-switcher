@@ -280,6 +280,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .title h1 {
   font-size: 1.75em;
@@ -295,7 +296,8 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding-bottom: 20px;
+  /* padding: 10px; */
 }
 .accounts div:first-child {
   border-top: 4px solid var(--facebook);
@@ -323,9 +325,9 @@ h6 {
   border-top: 4px solid var(--youtube);
   border-radius: 5px;
 }
-.account {
-  margin: 30px 0;
-}
+/* .account {
+  padding-bottom: 10px;
+} */
 .account p {
   font-size: 13px;
 }
@@ -333,7 +335,7 @@ h6 {
   display: flex;
   align-items: center;
   font-size: 13px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 /* .account p:first-child img {
   margin-left: 0px;
@@ -402,7 +404,7 @@ h6 {
   .main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 2fr 0.4fr repeat(2, 1.1fr);
+    grid-template-rows: 1fr 1.7fr 0.25fr repeat(2, 1fr);
     padding: 0px 160px;
   }
   .header {
@@ -410,9 +412,6 @@ h6 {
     display: flex;
     justify-content: space-between;
     margin-left: 2px;
-  }
-  .account {
-    margin: unset;
   }
 
   .accounts {
@@ -440,16 +439,26 @@ h6 {
   }
   .subheading {
     grid-area: 3 / 1 / 4 / 5;
+    margin-top: 30px;
+    margin-bottom: 25px;
   }
   .overview {
     grid-area: 4 / 1 / 6 / 5;
     display: grid;
-    grid-template-columns: repeat(4, 1.2fr);
-    grid-template-rows: repeat(2, 1.2fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
       "overview1 overview2 overview3 overview4"
       "overview5 overview6 overview7 overview8";
-    grid-column-gap: 25px;
+    grid-column-gap: 30px;
     grid-row-gap: 25px;
+  }
+  .card p:first-child {
+    padding-right: 25px;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  .card p:first-child img {
+    padding-top: 0px;
   }
 }
