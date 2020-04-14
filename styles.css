@@ -402,6 +402,57 @@ h6 {
 body[data-theme="light"] .subheading h2 {
   color: var(--text-color);
 }
+@media screen and (min-width: 767px) {
+  .accounts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .card {
+    margin: 10px;
+  }
+  .card span.information {
+    font-size: 1.5em;
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .title h1 {
+    font-size: 24px;
+  }
+  .title p {
+    font-size: 18px;
+  }
+  .title {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--text-color);
+  }
+  .theme-switch {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .account {
+    margin: 15px 0 20px 0;
+  }
+  .subheading h2 {
+    margin: 20px 0;
+  }
+  .card {
+    padding: 15px;
+    margin: 20px;
+  }
+  .card p {
+    padding: 15px;
+  }
+}
 
 @media screen and (min-width: 1000px) {
   .main {
@@ -463,35 +514,5 @@ body[data-theme="light"] .subheading h2 {
   }
   .card p:first-child img {
     padding-top: 0px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .title h1 {
-    font-size: 24px;
-  }
-  .title p {
-    font-size: 18px;
-  }
-  .title {
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--text-color);
-  }
-  .theme-switch {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .account {
-    margin: 15px 0 20px 0;
-  }
-  .subheading h2 {
-    margin: 20px 0;
-  }
-  .card {
-    padding: 15px;
-    margin: 20px;
-  }
-  .card p {
-    padding: 15px;
   }
 }
