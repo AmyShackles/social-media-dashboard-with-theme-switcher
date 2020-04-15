@@ -176,14 +176,12 @@ label {
   font-size: 13.5px;
   padding-top: 15px;
 }
-.toggle input {
-  position: absolute;
-   top: -9999px;
-   left: -9999px;
-}
 .toggle {
   display: flex;
   position: relative;
+ -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
   align-items: center;
   margin-top: 10px;
   width: 52px;
