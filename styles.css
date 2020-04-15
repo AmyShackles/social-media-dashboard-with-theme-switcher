@@ -127,14 +127,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /* Theming */
-.onoffswitch {
-  --toggle-color-dark: linear-gradient(
-    to left,
-    hsl(210, 78%, 56%),
-    hsl(146, 68%, 55%)
-  );
-}
+
 html {
   --lime-green: hsl(163, 72%, 41%);
   --bright-red: hsl(356, 69%, 56%);
@@ -163,15 +158,23 @@ body[data-theme="light"] {
 }
 
 /* Personal Styling */
-/* .header,
-.accounts,
-.overview {
-  display: flex;
-} */
+
 body {
-  /* height: 100vh;
-  min-height: 100%; */
   background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--secondary-text-color);
+}
+
+label {
+  font-size: 13.5px;
+  padding-top: 15px;
 }
 
 .toggle {
@@ -212,9 +215,6 @@ body[data-theme="light"] .toggle:before {
 .toggle {
   background: var(--toggle-color);
 }
-.toggle:checked {
-  background: var(--toggle-color);
-}
 
 .toggle:checked:before {
   left: 32px;
@@ -235,10 +235,6 @@ body[data-theme="light"] .toggle:before {
   color: hsl(228, 45%, 44%);
 }
 
-label {
-  font-size: 13.5px;
-  padding-top: 15px;
-}
 .main {
   display: flex;
   flex-direction: column;
@@ -248,14 +244,6 @@ label {
   color: var(--text-color);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--secondary-text-color);
-}
 .account,
 .card {
   background-color: var(--card-background);
@@ -301,7 +289,6 @@ h6 {
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
-  /* padding: 10px; */
 }
 .accounts div:first-child {
   border-top: 4px solid var(--facebook);
@@ -329,9 +316,7 @@ h6 {
   border-top: 4px solid var(--youtube);
   border-radius: 5px;
 }
-/* .account {
-  padding-bottom: 10px;
-} */
+
 .account p {
   font-size: 13px;
 }
@@ -341,9 +326,7 @@ h6 {
   font-size: 13px;
   margin-top: 30px;
 }
-/* .account p:first-child img {
-  margin-left: 0px;
-} */
+
 .account p:first-child span {
   margin-left: 8px;
   font-weight: bold;
@@ -374,8 +357,6 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* padding-top: 15px;
-  padding: 0 28px; */
 }
 .card p {
   display: flex;
@@ -406,6 +387,9 @@ h6 {
 body[data-theme="light"] .subheading h2 {
   color: var(--text-color);
 }
+
+/* Media Queries */
+
 @media screen and (min-width: 767px) {
   .accounts {
     display: grid;
