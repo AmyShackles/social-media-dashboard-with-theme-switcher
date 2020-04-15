@@ -178,12 +178,15 @@ label {
 }
 
 .toggle {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+
   display: flex;
   align-items: center;
   margin-top: 10px;
   width: 52px;
   height: 22px;
-  position: relative;
   border-radius: 50px;
   overflow: hidden;
   outline: none;
