@@ -141,7 +141,11 @@ html {
   --youtube: hsl(348, 97%, 39%);
 }
 body {
-  --toggle-color: linear-gradient(rgb(55, 143, 230), rgb(79, 222, 141));
+  --toggle-color: linear-gradient(
+    to right,
+    rgb(55, 143, 230),
+    rgb(79, 222, 141)
+  );
   --background-color: hsl(230, 17%, 14%);
   --top-background-color: hsl(232, 19%, 15%);
   --card-background: hsl(228, 28%, 20%);
@@ -173,19 +177,20 @@ h6 {
 }
 
 label {
-  font-size: 13.5px;
-  padding-top: 15px;
+  font-size: 14px;
+  padding-top: 14px;
+  margin-left: -2px;
 }
 .toggle {
   display: flex;
   position: relative;
- -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   align-items: center;
   margin-top: 10px;
-  width: 52px;
-  height: 22px;
+  width: 48px;
+  height: 24px;
   border-radius: 50px;
   overflow: hidden;
   outline: none;
@@ -202,14 +207,16 @@ label {
   width: 18px;
   height: 18px;
   background: var(--background-color);
-  left: 2px;
-  top: 2px;
+  left: 3px;
+  top: 3px;
   border-radius: 50%;
   box-shadow: 0 1px 2px hsl(146, 68%, 55%);
 }
 body[data-theme="light"] .toggle:before {
   background: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  top: 3px;
+  margin-left: -3px;
 }
 .toggle {
   background: var(--toggle-color);
@@ -362,8 +369,8 @@ body[data-theme="light"] .toggle:before {
   justify-content: space-between;
   font-size: 14px;
   font-weight: bold;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 29px;
+  padding-right: 33px;
 }
 .card span.information {
   font-weight: bold;
@@ -372,12 +379,18 @@ body[data-theme="light"] .toggle:before {
 }
 .card .green,
 .card .red {
-  padding-top: 15px;
+  padding-top: 21px;
+  margin-right: -2px;
 }
 .card span.green,
 .card span.red {
   font-weight: bold;
   font-size: 12px;
+}
+.card span.green img,
+.card span.red img {
+  padding-bottom: 2px;
+  padding-right: 2px;
 }
 .subheading {
   display: flex;
@@ -401,25 +414,34 @@ body[data-theme="light"] .subheading h2 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-  .card {
-    margin: 10px;
-  }
+
   .card span.information {
-    font-size: 1.5em;
+    font-size: 32px;
     padding-top: 5px;
   }
 }
 
 @media screen and (max-width: 999px) {
+  .title {
+    margin-bottom: 5px;
+  }
+  label {
+    padding-top: 15px;
+    margin-left: -5px;
+    font-size: 14px;
+  }
   .title h1 {
     font-size: 24px;
+    margin-left: -5px;
   }
   .title p {
-    font-size: 18px;
-  }
-  .title {
+    font-size: 14px;
+    margin-left: -6px;
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: 0.25px solid var(--text-color);
+  }
+  .toggle {
+    margin-right: -8px;
   }
   .theme-switch {
     display: flex;
@@ -427,17 +449,26 @@ body[data-theme="light"] .subheading h2 {
     width: 100%;
   }
   .account {
-    margin: 15px 0 20px 0;
+    margin: 14px 0 20px 0;
+    padding-bottom: 30px;
   }
   .subheading h2 {
     margin: 20px 0;
+    margin-left: -4px;
+    padding-left: 0;
   }
   .card {
-    padding: 15px;
-    margin: 20px;
+    margin: 10px 0;
+    margin-bottom: 15px;
+    padding-top: 24px;
+    padding-bottom: 1.25px;
   }
   .card p {
-    padding: 15px;
+    padding-bottom: 24px;
+    margin-left: -10px;
+  }
+  .card p:first-child {
+    padding-bottom: 25px;
   }
 }
 
@@ -491,15 +522,13 @@ body[data-theme="light"] .subheading h2 {
     grid-template-areas:
       "overview1 overview2 overview3 overview4"
       "overview5 overview6 overview7 overview8";
-    grid-column-gap: 30px;
+    grid-column-gap: 25px;
     grid-row-gap: 25px;
   }
   .card p:first-child {
-    padding-right: 25px;
-    padding-left: 30px;
     padding-top: 10px;
   }
   .card p:first-child img {
-    padding-top: 0px;
+    margin-top: -4px;
   }
 }
